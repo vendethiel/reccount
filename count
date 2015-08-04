@@ -1,0 +1,5 @@
+#!/usr/bin/env perl -n
+next if /count/;
+s{/$}{};
+chomp;
+print s{\d\. }{}r . " - " . (my () = glob s/ /\\ /gr . "/*") . "\n"

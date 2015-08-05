@@ -1,0 +1,5 @@
+#!/usr/bin/env perl6 -n
+next when /count/;
+s/\/$//;
+.=chomp;
+say $_.subst(/\d'. '/, ''), " - ", +.&dir
